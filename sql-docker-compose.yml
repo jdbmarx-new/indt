@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server_container
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SAPassword123
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"  # Porta 1433 mapeada para localhost
+    volumes:
+      - ./db-init/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - sql_data:/var/opt/mssql  # Persistir dados
+
+volumes:
+  sql_data:
