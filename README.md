@@ -39,7 +39,7 @@ Este projeto foi projetado para ser executado facilmente utilizando Docker e Doc
 
 Um arquivo `docker-compose.yml` está disponível na raiz do projeto para facilitar a criação de uma instância padrão do SQL Server em um contêiner Docker. Além disso, um script `init.sql` é fornecido na pasta `db-init` para criar os bancos de dados necessários para a aplicação.
 
-Para iniciar o contêiner do SQL Server e criar os bancos de dados, execute os seguintes comandos na raiz do projeto:
+Para iniciar o contêiner do SQL Server e criar os bancos de dados, execute o seguinte comando na raiz do projeto:
 
 ```bash
 docker-compose up -d
